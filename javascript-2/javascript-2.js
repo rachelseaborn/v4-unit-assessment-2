@@ -36,7 +36,11 @@ let foods = [
 */
 
 //CODE HERE
-
+/*foods.forEach = (function (element, i) {
+  element[i].carbs = 4
+  element[i].protein = 4
+  element[i].fat = 9
+}) */
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -130,7 +134,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+const helensInfo = Object.assign(contactInfo, shippingInfo)
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -139,14 +143,14 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+const ellensInfo = { ...helensInfo, name: 'Ellen', email: 'ellen@email.com' }
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
-
+const { email } = ellensInfo
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 
@@ -154,7 +158,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+const { zipCode, state } = shippingInfo
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
   Use the userInfo object below to complete problems 9-11.
@@ -216,7 +220,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+/*let shouldAlert = userInfo[0].alerts */
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -251,7 +255,30 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let person = {
+  name: 'Sergio',
+  age: 38,
+  jobs: ['designing', 'coding', 'eating'],
+  birthday: function () {
+    this.age += 1
+  },
+  favorites:
+  {
+    color: 'yellow',
+    number: 7,
+    book: 'Tipping Point'
+  },
+  kids: [
+    {
+      name: 'Kristen',
+      age: 7
+    },
+    {
+      name: 'Jason',
+      age: 10
+    }
+  ]
+}
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
   For the last two problems, you will be determining the 

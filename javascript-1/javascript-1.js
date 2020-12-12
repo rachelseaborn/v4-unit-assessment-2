@@ -175,7 +175,11 @@ const classes = [
 */
 
 //CODE HERE
+/*for (let i = 0; i < class.length; i++) {
+    for (let key in class) {
 
+    }
+} */
 
 ////////////////////PROBLEM 10////////////////////
 /*
