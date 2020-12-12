@@ -212,7 +212,12 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+function Dog(name, age, breed, tricks) {
+    this.name = name
+    this.age = age
+    this.breed = breed
+    this.tricks = tricks
+}
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age,
@@ -221,7 +226,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -231,7 +236,10 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+function bark(name) {
+    //bark.call(Dog)
+    return `${this.name} says bark!`
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -239,7 +247,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+let fidoSpeak = bark.call(fido)
 
 ////////////////////PROBLEM 13////////////////////
 /*
