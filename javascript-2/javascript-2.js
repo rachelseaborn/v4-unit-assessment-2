@@ -114,6 +114,9 @@ let blueProducts = products.filter(function (element, index, array) {
 */
 
 //CODE HERE
+let orderTotal = blueProducts.reduce(function (acc, element, index, array) {
+  return (acc += element.price)
+}, 0)
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
