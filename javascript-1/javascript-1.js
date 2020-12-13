@@ -200,14 +200,14 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-//function compare(arr1, arr2, cb) {
 for (let i = 0; i < lettersToPair.length; i++) {
-    for (let j = i + 1; j < lettersToPair.length; j++)
-        if (lettersToPair[j] === lettersToPair[i]) {
-            pairsArray.push(j, i)
-            j--
-        }
+    for (let j = i + 1; j < lettersToPair.length; j++) {
+        if (lettersToPair[j] === lettersToPair[i])
+            pairsArray.push([i, j])
+    }
 }
+
+
 
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
