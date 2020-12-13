@@ -1,6 +1,6 @@
 ////////////////////PROBLEM 1////////////////////
 
-const e = require("cors")
+//const e = require("cors")
 
 //DO NOT EDIT CODE BELOW
 let foods = [
@@ -102,7 +102,7 @@ let saleProducts = products.map(function (element, index, array) {
 */
 
 //CODE HERE - WORKS IN REPL
-let blueProducts = products.filter(function (element, index, array) {
+let blueProducts = products.filter(function (element) {
   if (element.color.includes('blue'))
     return element
 })
@@ -233,7 +233,7 @@ const userInfo = {
 */
 
 //CODE HERE
-/*let shouldAlert = userInfo[0].alerts */
+let shouldAlert = userInfo.settings.alerts
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -241,7 +241,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let topic = userInfo.topics[3]
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -249,7 +249,7 @@ const userInfo = {
 */
 
 //CODE HERE
-
+let commenterId = userInfo.comments[1].responses[0].userId
 ////////////////////PROBLEM 12////////////////////
 /*
   Create an object called 'person' that has the following properties. 
