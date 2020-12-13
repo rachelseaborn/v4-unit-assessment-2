@@ -175,11 +175,16 @@ const classes = [
 */
 
 //CODE HERE
-/*for (let i = 0; i < class.length; i++) {
-    for (let key in class) {
-
+for (let i = 0; i < classes.length; i++) {
+    for (let key in classes[i]) {
+        if (classes[i].inPerson === true) {
+            classes[i].inPerson = false
+        }
+        if (classes[i].homework === true) {
+            classes[i].homework = false
+        }
     }
-} */
+}
 
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -195,7 +200,14 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+//function compare(arr1, arr2, cb) {
+for (let i = 0; i < lettersToPair.length; i++) {
+    for (let j = i + 1; j < lettersToPair.length; j++)
+        if (lettersToPair[j] === lettersToPair[i]) {
+            pairsArray.push(j, i)
+            j--
+        }
+}
 
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
