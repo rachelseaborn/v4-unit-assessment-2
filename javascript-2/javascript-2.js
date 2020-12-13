@@ -1,5 +1,7 @@
 ////////////////////PROBLEM 1////////////////////
 
+const e = require("cors")
+
 //DO NOT EDIT CODE BELOW
 let foods = [
   {
@@ -35,12 +37,13 @@ let foods = [
   and then adding the results together. 
 */
 
-//CODE HERE
-/*foods.forEach = (function (element, i) {
-  element[i].carbs = 4
-  element[i].protein = 4
-  element[i].fat = 9
-}) */
+//CODE HERE - WORKS IN REPL
+foods.forEach(function (element, index, array) {
+  element['carbs'] *= 4
+  element['protein'] *= 4
+  element['fat'] *= 9
+  element['calories'] = element['carbs'] + element['protein'] + element['fat']
+})
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -84,7 +87,11 @@ const products = [
   Save the copy to a new variable called 'saleProducts'.
 */
 
-//CODE HERE
+//CODE HERE - WORKS IN REPL
+let saleProducts = products.map(function (element, index, array) {
+  element.price *= .75
+  return element
+})
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -94,8 +101,11 @@ const products = [
   (Hint: look up the array method 'includes' on MDN)
 */
 
-//CODE HERE
-
+//CODE HERE - WORKS IN REPL
+let blueProducts = products.filter(function (element, index, array) {
+  if (element.color.includes('blue'))
+    return element
+})
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
