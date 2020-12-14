@@ -12,15 +12,18 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 header {
     width: 100vw;
     height: 100px;
-    /*background: none; */
     background-color: black;
     display: flex;
     justify-content: space-between;
-    /*align-items: center; */
     position: fixed;
     z-index: 2; 
 }
@@ -52,32 +55,110 @@ a:visited {
 }  
 
 main {
-    height: 400px;
+    height: 220px;
     width: 50%;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: left;
-    /* align-items: center; */
-    position: fixed; 
-    margin-top: 120px;
+    position: relative; 
+    margin-top: 80px;
     margin-left: 40px;
-    /*z-index: 2; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-aside {
-    height: 150px;
-    width: 20%;
+#profile {
+    height: 170px;
+    width: 16%;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: right;
     /* align-items: center; */
-    /*position: relative;  */
-    margin-top: 300px;
-    margin-right: 40px;
+    position: fixed;  
+    margin-top: 200px;
+    margin-left: 830px;
+    border-radius: 15px;
+    box-shadow:1px 1px 20px 1px rgba(102, 75, 75, .3) ;
 }
+
+.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#profile h2 {
+    text-align: center;
+}
+
+aside {
+    height: 50px;
+    width: 50px;
+}
+
+article {
+    height: 350px;
+    width: 15%;
+    position: fixed;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 830px ;
+    margin-top: 400px;
+    border-radius: 15px;
+    box-shadow:1px 1px 20px 1px rgba(102, 75, 75, .3) ;
+    padding-left: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    }
+
+article li {
+    margin-bottom: 5px;
+}
+
+ article h3 {
+    text-align: center;
+    margin-right: 30px;
+} 
+
+#gallery {
+    height: 300px;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    background-color: hotpink;
+    margin-top: 400;
+    margin-left: 40px;
+    /*margin-bottom: 20px; */
+    overflow: scroll;
+    justify-content: center;
+}
+
+#gallery img {
+    margin: 10px;
+    padding: 20px;
+ } 
+
+ #gallery h4 {
+     margin-top: 20px;
+     margin-bottom: 0px;
+ }
+
 
 footer {
-
+    margin-top: auto;
+    height: 75px;
+    background-color: rgb(42, 171, 226);
 }
+
+footer h3 {
+    margin-left: 40px;
+}
+
+aside {
+           float:right;
+   
+       }
